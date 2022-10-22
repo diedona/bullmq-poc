@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "npx tsc",
-    "dev": "ts-node-dev --respawn --transpile-only ./src/web-app/server.ts"
+    "dev:web": "ts-node-dev --respawn --transpile-only ./src/web-app/server.ts",
+    "dev:worker": "ts-node-dev --respawn --transpile-only ./src/worker/worker.ts"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
+    "bullmq": "^2.3.2",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "ioredis": "^5.2.3"
